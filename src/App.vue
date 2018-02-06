@@ -33,21 +33,36 @@
         </div>
       </div>
     </div>
+
     <router-view></router-view>
+
+    <footer class="footer is-primary">
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <p>And this right here is a spiffy footer, where you can put stuff.</p>
+          </div>
+          <div class="column has-text-right">
+            <a class="icon" href="#"><i class="fa fa-facebook"></i></a>
+            <a class="icon" href="#"><i class="fa fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 
 <script>
 export default {
   name: 'app',
-  data: function() {
+  data: function () {
     return {
       isActive: false
     }
   },
   methods: {
-    toggleNav: function() {
-      this.isActive = !this.isActive;
+    toggleNav: function () {
+      this.isActive = !this.isActive
     }
   }
 }
@@ -62,7 +77,7 @@ export default {
   a:hover
     color: gray
 
-.nav-left a 
+.nav-left a
   color: #fff
   font-weight: bold
 
@@ -76,5 +91,13 @@ a.r-item
 
 .nav-toggle span
   background-color: #C1C1C1
+
+footer
+  background-color: $primary !important
+  color: #fff
+
+  .icon
+    color: #fff
+    margin-left: 20px
 
 </style>
