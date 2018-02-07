@@ -22,7 +22,7 @@
             <p class="title"><strong>We provide superior logistics so that your business can succeed in a crazy world.</strong></p>
           </div>
           <div class="column">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</strong></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
           </div>
         </div>
       </div>
@@ -64,9 +64,9 @@ export default {
     return {
       heading: 'Soaring to new heights',
       subheading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    }
+    };
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

@@ -58,14 +58,14 @@ export default {
   data: function () {
     return {
       isActive: false
-    }
+    };
   },
   methods: {
     toggleNav: function () {
-      this.isActive = !this.isActive
+      this.isActive = !this.isActive;
     }
   }
-}
+};
 </script>
 
 <style lang="sass">

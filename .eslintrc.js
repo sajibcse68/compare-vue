@@ -24,6 +24,8 @@ module.exports = {
     // allow async-await
     'generator-star-spacing': 'off',
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    // overrides of the Airbnb style guide
+    'semi': [2, 'always']
   }
 }
