@@ -31,7 +31,10 @@ module.exports = {
       desiredCapabilities: {
         browserName: 'chrome',
         javascriptEnabled: true,
-        acceptSslCerts: true
+        acceptSslCerts: true,
+        chromeOptions: {
+          'args': ['incognito', 'disable-extensions', 'auto-open-devtools-for-tabs']
+        }
       }
     },
 
@@ -43,4 +46,4 @@ module.exports = {
       }
     }
   }
-}
+};

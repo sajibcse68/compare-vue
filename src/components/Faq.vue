@@ -1,5 +1,6 @@
 <template>
   <div class="faq">
+    <form></form>
     <div class="container">
       <section class="section">
         <h1 class="title">FAQ</h1>
@@ -23,6 +24,7 @@
 
 <script>
 import axios from 'axios';
+// import form from './Form.vue';
 
 export default {
   name: 'faq',

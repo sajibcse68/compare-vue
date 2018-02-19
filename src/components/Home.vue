@@ -1,5 +1,9 @@
 <template>
   <div class="home">
+    <div class="hello">
+      <img src="sajib">
+      <h1>Welcome to Your Vue.js App</h1>
+    </div>
     <section class="hero">
       <div class="hero-body">
         <div class="container">

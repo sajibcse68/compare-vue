@@ -16,7 +16,7 @@
 
           <router-link to="/" class="nav-item r-item">Home</router-link>
           <router-link to="faq" class="nav-item r-item">Features</router-link>
-          <router-link to="faq" class="nav-item r-item">About</router-link>
+          <router-link to="form" class="nav-item r-item">Form</router-link>
           <router-link to="faq" class="nav-item r-item">FAQ</router-link>
 
           <div class="nav-item">
@@ -33,7 +33,6 @@
         </div>
       </div>
     </div>
-
     <router-view></router-view>
 
     <footer class="footer is-primary">
@@ -53,6 +52,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'app',
   data: function () {
