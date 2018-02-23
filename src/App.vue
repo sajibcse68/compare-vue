@@ -52,6 +52,9 @@
 </template>
 
 <script>
+import Vue from 'vue';
+import Faq from './components/Faq';
+Vue.component('ac-faq', Faq);
 
 export default {
   name: 'app',

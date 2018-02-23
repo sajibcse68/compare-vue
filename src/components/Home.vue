@@ -4,6 +4,9 @@
       <img src="sajib">
       <h1>Welcome to Your Vue.js App</h1>
     </div>
+
+    <app-form></app-form>
+
     <section class="hero">
       <div class="hero-body">
         <div class="container">
@@ -58,10 +61,13 @@
         </div>
       </div>
     </section>
+    <ac-faq></ac-faq>
   </div>
 </template>
 
 <script>
+import Form from './Form';
+
 export default {
   name: 'home',
   data () {
@@ -69,6 +75,9 @@ export default {
       heading: 'Soaring to new heights',
       subheading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     };
+  },
+  components: {
+    'app-form': Form
   }
 };
 </script>

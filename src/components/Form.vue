@@ -73,7 +73,6 @@
 import './Faq.vue';
 
 export default {
-  name: 'form',
   data () {
     return {
       heading: 'Soaring to new heights',
