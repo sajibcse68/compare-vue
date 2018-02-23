@@ -4,7 +4,7 @@
     <div class="container">
       <section class="section">
         <h1 class="title">FAQ</h1>
-        <h2 class="subtitle is-4">Lorum ipsum and all of that jazz.</h2>
+        <h2 class="subtitle is-4"><b>{{ faqHeader }}</b></h2>
 
         <div class="columns" v-if="faqs && faqs.length">
           <div class="column is-one-third" v-for="(faq, index) of faqs" :key='index'>
@@ -28,6 +28,7 @@ import axios from 'axios';
 
 export default {
   name: 'faq',
+  props: ['faqHeader'],
   data: () => ({
     faqs: [],
     errors: []

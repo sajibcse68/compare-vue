@@ -61,7 +61,7 @@
         </div>
       </div>
     </section>
-    <ac-faq></ac-faq>
+    <ac-faq :faqHeader="faqHeader"></ac-faq>
   </div>
 </template>
 
@@ -73,7 +73,8 @@ export default {
   data () {
     return {
       heading: 'Soaring to new heights',
-      subheading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      subheading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      faqHeader: 'Passed from Home (parent component)'
     };
   },
   components: {
