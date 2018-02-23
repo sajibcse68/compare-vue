@@ -4,7 +4,9 @@
     <div class="container">
       <section class="section">
         <h1 class="title">FAQ</h1>
-        <h2 class="subtitle is-4"><b>{{ faqHeader }}</b></h2>
+        <h2 class="subtitle is-4 blue-color"><b>{{ faqHeader }}</b></h2>
+
+        <button @click="changeFaqHeader" >Change Text</button>
 
         <div class="columns" v-if="faqs && faqs.length">
           <div class="column is-one-third" v-for="(faq, index) of faqs" :key='index'>
@@ -28,6 +30,7 @@ import axios from 'axios';
 
 export default {
   name: 'faq',
+  // props: ['faqHeader],
   props: {
     faqHeader: {
       type: String,
@@ -38,6 +41,13 @@ export default {
     faqs: [],
     errors: []
   }),
+
+  methods: {
+    changeFaqHeader( ) {
+      this.faqHeader = "FAQ Header is Changed from child";
+      this.$emit('faqHeaderIsChanged', this.faqHeader);
+    }
+  },
 
   created () {
     axios.get('http://jsonplaceholder.typicode.com/posts')
@@ -64,4 +74,9 @@ export default {
 .columns
   flex-wrap: wrap
 
+.blue-color
+  color: blue
+
+button
+  padding 10px
 </style>

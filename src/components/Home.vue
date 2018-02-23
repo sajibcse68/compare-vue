@@ -60,8 +60,9 @@
           </div>
         </div>
       </div>
+      {{ faqHeader }}
     </section>
-    <ac-faq :faqHeader="faqHeader"></ac-faq>
+    <ac-faq :faqHeader="faqHeader" @faqHeaderIsChanged="faqHeader = $event"></ac-faq>
   </div>
 </template>
 
