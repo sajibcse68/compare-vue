@@ -28,7 +28,12 @@ import axios from 'axios';
 
 export default {
   name: 'faq',
-  props: ['faqHeader'],
+  props: {
+    faqHeader: {
+      type: String,
+      default: 'It is default Header value'
+    }
+  },
   data: () => ({
     faqs: [],
     errors: []
