@@ -1,7 +1,8 @@
 <template>
   <form>
-  <faq></faq>
 
+  <h1>Start of Form</h1>
+  <h1>Age: {{ age }}</h1>
   <div class="form-group row">
     <label for="fname" class="col-sm-2 col-form-label">First Name</label>
     <div class="col-sm-10">
@@ -66,18 +67,30 @@
       <button id="submit" type="submit" class="btn btn-primary">Submit</button>
     </div>
   </div>
+<h1>End of Form</h1>
 </form>
 </template>
 
 <script>
 import './Faq.vue';
+import { eventBus } from '../main';
 
 export default {
+  props: {
+    age: {
+      type: String
+    }
+  },
   data () {
     return {
       heading: 'Soaring to new heights',
       subheading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     };
+  },
+  created () {
+    eventBus.$on('ageIsChanged', (age) => {
+      this.age = age;
+    });
   }
 };
 </script>

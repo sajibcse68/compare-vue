@@ -60,14 +60,19 @@
           </div>
         </div>
       </div>
-      {{ faqHeader }}
+      faqHeader: {{ faqHeader }} <br/>
+      age: {{ age }}
     </section>
-    <ac-faq :faqHeader="faqHeader" @faqHeaderIsChanged="faqHeader = $event"></ac-faq>
+
+    <acFaq :faqHeader="faqHeader" :age="age" @faqHeaderIsChanged="faqHeader = $event"></acFaq>
+
+    <acForm :age="age"></acForm>
   </div>
 </template>
 
 <script>
 import Form from './Form';
+import Faq from './Faq';
 
 export default {
   name: 'home',
@@ -75,11 +80,13 @@ export default {
     return {
       heading: 'Soaring to new heights',
       subheading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      faqHeader: 'Passed from Home (parent component)'
+      faqHeader: 'Passed from Home (parent component)',
+      age: '35 (Passed from Home)'
     };
   },
   components: {
-    'app-form': Form
+    'acForm': Form,
+    'acFaq': Faq
   }
 };
 </script>
@@ -114,4 +121,7 @@ h2
 .pd
   +tablet
     padding: 2em 0
+
+button
+  margin: 0px 0px 50px 0px
 </style>

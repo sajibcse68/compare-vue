@@ -1,12 +1,15 @@
 <template>
   <div class="faq">
-    <form></form>
+  <h1>Start of FAQ</h1>
     <div class="container">
       <section class="section">
         <h1 class="title">FAQ</h1>
-        <h2 class="subtitle is-4 blue-color"><b>{{ faqHeader }}</b></h2>
+        <h2 class="subtitle is-4 blue-color">FAQ Header: <b>{{ faqHeader }}</b></h2>
+        <h2 class="subtitle is-4 blue-color">Age: <b>{{ age }}</b></h2>
+        <button @click="changeFaqHeader" >Change FAQ Header Text</button>
 
-        <button @click="changeFaqHeader" >Change Text</button>
+        <h3 class="subtitle is-4 blue-color">Age: <b>{{ age }}</b></h3>
+        <button @click="changeAge" >Change Age</button>
 
         <div class="columns" v-if="faqs && faqs.length">
           <div class="column is-one-third" v-for="(faq, index) of faqs" :key='index'>
@@ -21,20 +24,25 @@
 
       </section>
     </div>
+  <h1>End of FAQ</h1>
   </div>
 </template>
 
 <script>
 import axios from 'axios';
+import { eventBus } from '../main';
+
 // import form from './Form.vue';
 
 export default {
-  name: 'faq',
   // props: ['faqHeader],
   props: {
     faqHeader: {
       type: String,
       default: 'It is default Header value'
+    },
+    age: {
+      type: String
     }
   },
   data: () => ({
@@ -43,12 +51,15 @@ export default {
   }),
 
   methods: {
-    changeFaqHeader( ) {
-      this.faqHeader = "FAQ Header is Changed from child";
-      this.$emit('faqHeaderIsChanged', this.faqHeader);
+    changeFaqHeader () {
+      this.faqHeader = 'FAQ Header is Changed from child';
+      this.$emit(' ', this.faqHeader);
+    },
+    changeAge () {
+      this.age = '100';
+      eventBus.$emit('ageIsChanged', this.age);
     }
   },
-
   created () {
     axios.get('http://jsonplaceholder.typicode.com/posts')
       .then(response => {
@@ -78,5 +89,5 @@ export default {
   color: blue
 
 button
-  padding 10px
+  margin: 0px 0px 50px 0px
 </style>
