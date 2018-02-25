@@ -11,7 +11,16 @@ export default {
   data: () => {
     return {
       count: 0
-    }
+    };
+  },
+  destroyed () {
+    console.log('Destroyed!');
+  },
+  deactivated () {
+    console.log('New is Deactivated!');
+  },
+  activated () {
+    console.log('New is Activated!');
   }
-}
+};
 </script>

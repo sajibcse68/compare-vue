@@ -4,11 +4,11 @@
   <button @click="selectedComponent='AppNew'">New</button>
   <hr>
   <p>selectedComponent: {{ selectedComponent }}</p>
-  
+
   <keep-alive>
     <component :is="selectedComponent"></component>
   </keep-alive>
-  
+
   <hr>
 </div>
 </template>
@@ -21,14 +21,13 @@ export default {
   data: () => {
     return {
       selectedComponent: 'AppAuthor'
-    }  
+    };
   },
   components: {
     'AppAuthor': Author,
     'AppNew': New
   }
-}
-
+};
 </script>
 
 <style>
