@@ -18,6 +18,7 @@
           <router-link to="faq" class="nav-item r-item">Features</router-link>
           <router-link to="form" class="nav-item r-item">Form</router-link>
           <router-link to="faq" class="nav-item r-item">FAQ</router-link>
+          <router-link to="quote" class="nav-item r-item">Quote</router-link>
 
           <div class="nav-item">
             <p class="control">
