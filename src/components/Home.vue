@@ -5,7 +5,10 @@
       <h1>Welcome to Your Vue.js App</h1>
     </div>
 
-    <app-form></app-form>
+    <acForm>
+      <h2>Passing HTML template using slot</h2>
+      <p>This is <b>app-form</b></p>
+    </acForm>
 
     <section class="hero">
       <div class="hero-body">

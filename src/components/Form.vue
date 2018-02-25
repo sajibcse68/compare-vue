@@ -1,6 +1,8 @@
 <template>
   <form>
 
+    <slot></slot>
+
   <h1>Start of Form</h1>
   <h1>Age: {{ age }}</h1>
   <div class="form-group row">
