@@ -4,7 +4,11 @@
   <button @click="selectedComponent='AppNew'">New</button>
   <hr>
   <p>selectedComponent: {{ selectedComponent }}</p>
-  <component :is="selectedComponent"></component>
+  
+  <keep-alive>
+    <component :is="selectedComponent"></component>
+  </keep-alive>
+  
   <hr>
 </div>
 </template>
