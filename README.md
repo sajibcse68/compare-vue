@@ -1,6 +1,6 @@
-# compare-vue
+# Vue-practice
 
-> A Vue.js project
+> Explore various features of Vue.js to dig into it deeply! 
 
 ## Build Setup
 

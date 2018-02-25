@@ -6,6 +6,8 @@ import NewForm from '@/components/Form';
 import Quote from '@/components/advance-comp-usage/Quote';
 import Author from '@/components/advance-comp-usage/Author';
 import New from '@/components/advance-comp-usage/New';
+// import MonsterGame from '@/compopent/Monster';
+import WonderfulQuotes from '@/components/WonderfulQuotes/Quotes';
 
 Vue.use(Router);
 
@@ -40,6 +42,18 @@ export default new Router({
       path: '/new',
       name: 'New',
       component: New
+    },
+    /* see game-vue project
+    {
+      path: '/monster-game',
+      name: 'Monster Game',
+      component: MonsterGame
+    },
+     */
+    {
+      path: '/wonderful-quotes',
+      name: 'Wonderful Quotes',
+      component: WonderfulQuotes
     }
   ]
 });
