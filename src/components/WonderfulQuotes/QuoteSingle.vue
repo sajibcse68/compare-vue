@@ -13,6 +13,9 @@ export default {
 };
 </script>
 <style>
+.panel {
+  font-size: 2em;
+}
 .panel-body {
   font-family: 'Arizonia', cursive;
 }

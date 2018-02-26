@@ -1,7 +1,7 @@
 <template>
   <div class="row">
 
-    <single-quote v-for="quote in quotes" :key="quote.id">aa{{ quote }}</single-quote>
+    <single-quote v-for="quote in quotes" :key="quote.id">{{ quote }}</single-quote>
 
   </div>
 </template>
