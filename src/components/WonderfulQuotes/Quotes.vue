@@ -5,6 +5,14 @@
     <ac-new-quote @quoteAdded="addNewQuote"></ac-new-quote>
 
     <ac-quote-gride :quotes="quotes"></ac-quote-gride>
+
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <div class="alert alert-info">
+          Info: Click on a Quote to delete it!
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
