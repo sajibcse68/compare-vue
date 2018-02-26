@@ -15,8 +15,9 @@
         <div class="nav-right nav-menu" v-bind:class="{ 'is-active': isActive }">
 
           <router-link to="/" class="nav-item r-item">Home</router-link>
-          <router-link to="/monster-game" class="nav-item r-item">Monster Game (project-1)</router-link>
-          <router-link to="/wonderful-quotes" class="nav-item r-item">Wonderful Quotes (project-2)</router-link>
+          <router-link to="/monster-game" class="nav-item r-item">project-1</router-link>
+          <router-link to="/wonderful-quotes" class="nav-item r-item">project-2</router-link>
+          <router-link to="/Forms" class="nav-item r-item">project-3</router-link>
           <router-link to="form" class="nav-item r-item">Form</router-link>
           <router-link to="faq" class="nav-item r-item">FAQ</router-link>
           <router-link to="quote" class="nav-item r-item">Quote</router-link>

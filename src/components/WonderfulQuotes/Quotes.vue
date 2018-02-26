@@ -1,6 +1,8 @@
 <template>
   <div class="container">
 
+    <h1 style="margin: 50px; position: center; font-size: 30px;"><b>Wonderful Quotes</b></h1>
+
     <app-header :quoteCount="quotes.length" :maxQoutes="maxQuotes"></app-header>
 
     <ac-new-quote @quoteAdded="addNewQuote"></ac-new-quote>
