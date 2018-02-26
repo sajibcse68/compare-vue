@@ -35,6 +35,16 @@ Vue.use(VueResource);
 Vue.http.options.root = 'https://vuejs-http-77464.firebaseio.com/data.json';
 // Vue.http.options.headers = 'anything'
 
+Vue.http.interceptors.push((req, next) => {
+  console.log('req: ', req);
+  /*
+  if (req.method === 'POST') {
+    request.method = 'PUT';
+  }
+  */
+  next();
+})
+
 export default {
   data() {
     return {
