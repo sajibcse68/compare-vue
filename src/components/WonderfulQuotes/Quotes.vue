@@ -4,7 +4,7 @@
 
     <ac-new-quote @quoteAdded="addNewQuote"></ac-new-quote>
 
-    <ac-quote-gride :quotes="quotes"></ac-quote-gride>
+    <ac-quote-gride :quotes="quotes" @quoteDeleted="quoteDeleted"></ac-quote-gride>
 
     <div class="row">
       <div class="col-sm-12 text-center">
@@ -29,8 +29,11 @@ export default {
     };
   },
   methods: {
-    addNewQuote(newQuote) {
+    addNewQuote (newQuote) {
       this.quotes.push(newQuote);
+    },
+    quoteDeleted (index) {
+      this.quotes.splice(index, 1);
     }
   },
   components: {
