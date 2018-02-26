@@ -7,8 +7,8 @@
     <div id="off"
     @click="switched(false)"
     :class="{ active: !value }"> Off </div>
-  
-  </div>  
+
+  </div>
 </template>
 
 <script>
@@ -16,7 +16,7 @@
 
   props: ['value'],
   methods: {
-    switched(isOn) {
+    switched (isOn) {
       this.$emit('input', isOn);
     }
   }

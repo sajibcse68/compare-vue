@@ -10,14 +10,12 @@
           <span></span>
           <span></span>
           <span></span>
+          <span></span>
         </span>
 
         <div class="nav-right nav-menu" v-bind:class="{ 'is-active': isActive }">
 
           <router-link to="/" class="nav-item r-item">Home</router-link>
-          <router-link to="/monster-game" class="nav-item r-item">project-1</router-link>
-          <router-link to="/wonderful-quotes" class="nav-item r-item">project-2</router-link>
-          <router-link to="/Forms" class="nav-item r-item">project-3</router-link>
           <router-link to="form" class="nav-item r-item">Form</router-link>
           <router-link to="faq" class="nav-item r-item">FAQ</router-link>
           <router-link to="quote" class="nav-item r-item">Quote</router-link>
@@ -36,6 +34,33 @@
         </div>
       </div>
     </div>
+
+<div class="row">
+  <div class="col-md-2">
+    <router-link to="/monster-game" class="nav-item r-item">project-1</router-link>
+  </div>
+
+  <div class="col-md-2">
+    <router-link to="/wonderful-quotes" class="nav-item r-item">project-2</router-link>
+  </div>
+
+  <div class="col-md-2">
+    <router-link to="/Forms" class="nav-item r-item">project-3</router-link>
+  </div>
+
+  <div class="col-md-2">
+    <router-link to="form" class="nav-item r-item">Form</router-link>
+  </div>
+  
+  <div class="col-md-2">
+    <router-link to="faq" class="nav-item r-item">FAQ</router-link>
+  </div>
+  <div class="col-md-2">
+    <router-link to="vue-resource" class="nav-item r-item">Vue Resource</router-link>
+  </div>
+</div>
+
+
     <router-view></router-view>
 
     <footer class="footer is-primary">

@@ -9,6 +9,7 @@ import New from '@/components/advance-comp-usage/New';
 import Forms from '@/components/Forms/Forms';
 // import MonsterGame from '@/compopent/Monster';
 import WonderfulQuotes from '@/components/WonderfulQuotes/Quotes';
+import VueResource from '@/components/VueResource/VueResource';
 
 Vue.use(Router);
 
@@ -60,6 +61,11 @@ export default new Router({
       path: '/forms',
       name: 'Forms',
       component: Forms
+    },
+    {
+      path: '/vue-resource',
+      name: 'Vue Resource',
+      component: VueResource
     }
   ]
 });
