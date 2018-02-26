@@ -37,6 +37,14 @@ export default {
   methods: {
     submit() {
       console.log('data: ', this.user);
+      this.$http.post('https://vuejs-http-77464.firebaseio.com/data.json', this.user)
+        .then((resp) => {
+          console.log('resp: ', resp);
+          this.user.username = '';
+          this.user.email = '';
+        }, (err) => {
+          console.log('err: ', err);
+        })
     }
   }
 }
