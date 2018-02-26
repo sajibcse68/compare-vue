@@ -32,6 +32,9 @@ import VueResource from 'vue-resource';
 
 Vue.use(VueResource);
 
+Vue.http.options.root = 'https://vuejs-http-77464.firebaseio.com/data.json';
+// Vue.http.options.headers = 'anything'
+
 export default {
   data() {
     return {
@@ -45,7 +48,7 @@ export default {
   methods: {
     submit() {
       console.log('data: ', this.user);
-      this.$http.post('https://vuejs-http-77464.firebaseio.com/data.json', this.user)
+      this.$http.post('', this.user)
         .then((resp) => {
           console.log('resp: ', resp);
           this.user.username = '';
@@ -55,7 +58,7 @@ export default {
         })
     },
     fetchData() {
-      this.$http.get('https://vuejs-http-77464.firebaseio.com/data.json')
+      this.$http.get('')
         .then(resp => {
           return resp.json();
         })
