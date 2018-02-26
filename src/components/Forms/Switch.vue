@@ -20,8 +20,7 @@
       this.$emit('input', isOn);
     }
   }
-    
-  }
+};
 </script>
 
 <style scoped>
