@@ -32,28 +32,27 @@ import VueResource from 'vue-resource';
 
 Vue.use(VueResource);
 
-Vue.http.options.root = 'https://vuejs-http-77464.firebaseio.com/data.json';
+Vue.http.options.root = 'https://vuejs-http-77464.firebaseio.com/';
 // Vue.http.options.headers = 'anything'
 
+/*
 Vue.http.interceptors.push((req, next) => {
   console.log('req: ', req);
-  /* intercepting requests
-  ** 
+
+//intercepting requests
   if (req.method === 'POST') {
     request.method = 'PUT';
   }
   next()
-  */
 
   // intercepting responses
-  /*
   next(resp => {
     resp.json = () => {
      return { message: response.body }
     }
   });
-  */
 })
+*/
 
 export default {
   data() {
@@ -62,12 +61,14 @@ export default {
         username: '',
         email: ''
       },
-      users: []
+      users: [],
+      resoruce: {}
     }
   },
   methods: {
     submit() {
       console.log('data: ', this.user);
+      /*
       this.$http.post('', this.user)
         .then((resp) => {
           console.log('resp: ', resp);
@@ -76,6 +77,8 @@ export default {
         }, (err) => {
           console.log('err: ', err);
         })
+      */
+     this.resource.saveAlt({}, this.user);
     },
     fetchData() {
       this.$http.get('')
@@ -90,7 +93,13 @@ export default {
           }
           this.users = resultArr;
         })
-    }
+    }, 
+  },
+  created() {
+    const customActions = {
+      saveAlt: { method: 'POST', url: 'alternative.json' }
+    };
+    this.resource = this.$resource('data.json', {}, customActions);
   }
 }
 </script>
