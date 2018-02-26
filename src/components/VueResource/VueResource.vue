@@ -37,12 +37,22 @@ Vue.http.options.root = 'https://vuejs-http-77464.firebaseio.com/data.json';
 
 Vue.http.interceptors.push((req, next) => {
   console.log('req: ', req);
-  /*
+  /* intercepting requests
+  ** 
   if (req.method === 'POST') {
     request.method = 'PUT';
   }
+  next()
   */
-  next();
+
+  // intercepting responses
+  /*
+  next(resp => {
+    resp.json = () => {
+     return { message: response.body }
+    }
+  });
+  */
 })
 
 export default {
