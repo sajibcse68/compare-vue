@@ -1,7 +1,8 @@
 <template>
   <div class="container">
-    <h1>Quotes View</h1>
 
+    <app-header :quoteCount="quotes.length" :maxQoutes="maxQuotes"></app-header>
+    
     <ac-new-quote @quoteAdded="addNewQuote"></ac-new-quote>
 
     <ac-quote-gride :quotes="quotes" @quoteDeleted="quoteDeleted"></ac-quote-gride>
@@ -19,6 +20,7 @@
 <script>
 import QuoteGrid from './QuoteGrid';
 import NewQuote from './NewQuote';
+import Header from './Header';
 export default {
   data: () => {
     return {
@@ -30,7 +32,11 @@ export default {
   },
   methods: {
     addNewQuote (newQuote) {
-      this.quotes.push(newQuote);
+      if (this.quotes.length >= this.maxQuotes) {
+        alert('Please delete Qoutes first!');
+      } else {
+        this.quotes.push(newQuote);
+      }
     },
     quoteDeleted (index) {
       this.quotes.splice(index, 1);
@@ -38,7 +44,8 @@ export default {
   },
   components: {
     AcQuoteGride: QuoteGrid,
-    AcNewQuote: NewQuote
+    AcNewQuote: NewQuote,
+    AppHeader: Header
   }
 };
 </script>
