@@ -19,10 +19,10 @@ export default {
   data: () => {
     return {
       quote: ''
-    }
+    };
   },
   methods: {
-    createNew() {
+    createNew () {
       this.$emit('quoteAdded', this.quote);
       this.quote = '';
     }

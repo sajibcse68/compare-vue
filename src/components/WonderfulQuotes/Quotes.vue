@@ -2,7 +2,7 @@
   <div class="container">
 
     <app-header :quoteCount="quotes.length" :maxQoutes="maxQuotes"></app-header>
-    
+
     <ac-new-quote @quoteAdded="addNewQuote"></ac-new-quote>
 
     <ac-quote-gride :quotes="quotes" @quoteDeleted="quoteDeleted"></ac-quote-gride>
