@@ -41,6 +41,8 @@ export default new Router({
         { path: ':id', name: 'UserDetail', components: { default: UserDetail, 'header-bottom': Header } },
         { path: ':id/edit', name: 'UserEdit', components: { default: UserEdit, 'header-top': Header } }
       ]
-    }
+    },
+    { path: '/redirect-me', redirect: '/user' },
+    { path: '*', redirect: '/' }
   ]
 });
