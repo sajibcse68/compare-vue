@@ -7,7 +7,10 @@
     <hr>
 
     <router-view name="header-top"></router-view>
-    <router-view></router-view>
+    <transition name="slide" mode="out-in">
+      <router-view></router-view>
+    </transition>
+
     <router-view name="header-bottom"></router-view>
 
   </div>
@@ -43,3 +46,7 @@ import UserStart from './UserStart';
    }
  }
 </script>
+
+<style>
+/* need to put CSS for transition of router */
+</style>
