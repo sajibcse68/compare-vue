@@ -11,6 +11,7 @@
 
 <script>
   export default {
+    /*
     data: () => {
       return {
         btnLink: {
@@ -26,5 +27,6 @@
         }
       }
     }
+     */
   }
 </script>
