@@ -12,7 +12,7 @@ import WonderfulQuotes from '@/components/WonderfulQuotes/Quotes';
 import VueResource from '@/components/VueResource/VueResource';
 import RouterHome from '@/components/Routing/Home';
 import User from '@/components/Routing/User';
-// import UserStart from '@/components/Routing/UserStart';
+import UserStart from '@/components/Routing/UserStart';
 import UserDetail from '@/components/Routing/UserDetail';
 import UserEdit from '@/components/Routing/UserEdit';
 
@@ -34,14 +34,12 @@ export default new Router({
     { path: '/home', name: 'Router Home', component: RouterHome },
     { path: '/user',
       name: 'User',
-      component: User
-      /*
+      component: User,
       children: [
-        { path: ':id', name: 'User Details', component: UserDetail },
-        { path: ':id/edit', component: UserEdit }
-      ] */
-    },
-    { path: '/user/:id', name: 'User Details', component: UserDetail },
-    { path: '/user/:id/edit', name: 'User Edit', component: UserEdit }
+        { path: '', name: 'userStart', component: UserStart },
+        { path: ':id', name: 'UserDetail', component: UserDetail },
+        { path: ':id/edit', name: 'UserEdit', component: UserEdit }
+      ]
+    }
   ]
 });

@@ -7,7 +7,9 @@
     <hr>
     <button class="btn btn-primary" @click="navigateToHome">Back to Home</button>
     <hr>
-    <app-user-start></app-user-start>
+    
+    <router-view></router-view>
+
   </div>
 </template>
 
