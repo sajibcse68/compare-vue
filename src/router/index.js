@@ -64,7 +64,7 @@ const router = new Router({
 router.beforeEach((to, from, next) => {
   console.log('global beforEach');
   // next(next); // stay on this page
-  next({ redirect: });
+  next();
 });
 
 export default router;
