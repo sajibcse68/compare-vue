@@ -19,7 +19,7 @@ import Header from '@/components/Header/Header';
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   routes: [
     { path: '/', name: 'Home', component: Home },
@@ -38,7 +38,10 @@ export default new Router({
       component: User,
       children: [
         { path: '', name: 'userStart', component: UserStart },
-        { path: ':id', name: 'UserDetail', components: { default: UserDetail, 'header-bottom': Header } },
+        { path: ':id', name: 'UserDetail', components: { default: UserDetail, 'header-bottom': Header }, beforeEnter: (to, from, next) => {
+          console.log('inside route setup');
+          next();
+        } },
         { path: ':id/edit', name: 'UserEdit', components: { default: UserEdit, 'header-top': Header } }
       ]
     },
@@ -57,3 +60,11 @@ export default new Router({
     return {x: 0, y: 0};
   }
 });
+
+router.beforeEach((to, from, next) => {
+  console.log('global beforEach');
+  // next(next); // stay on this page
+  next({ redirect: });
+});
+
+export default router;
