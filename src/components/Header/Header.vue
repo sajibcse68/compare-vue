@@ -9,8 +9,7 @@
     <ul class="navbar-nav">
 
       <router-link to="/home" tag="li" class="nav-item" active-class="active" exact><a>Home</a></router-link>
-      <router-link to="/user/1" tag="li" class="nav-item" active-class="active" exact><a>User 1</a></router-link>
-      <router-link to="/user/2" tag="li" class="nav-item" active-class="active" exact><a>User 2</a></router-link>
+      <router-link to="/user" tag="li" class="nav-item" active-class="active" exact><a>User</a></router-link>
 
     </ul>
   </div>
