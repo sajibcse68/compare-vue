@@ -16,7 +16,7 @@
         <div class="nav-right nav-menu" v-bind:class="{ 'is-active': isActive }">
 
           <router-link to="/" class="nav-item r-item">Home</router-link>
-          <router-link to="form" class="nav-item r-item">Form</router-link>
+          <router-link to="/form" tag="li" active-class="active" class="nav-item r-item" exact><a>Form</a></router-link>
           <router-link to="faq" class="nav-item r-item">FAQ</router-link>
           <router-link to="quote" class="nav-item r-item">Quote</router-link>
 
