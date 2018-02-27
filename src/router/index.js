@@ -11,11 +11,32 @@ import Forms from '@/components/Forms/Forms';
 import WonderfulQuotes from '@/components/WonderfulQuotes/Quotes';
 import VueResource from '@/components/VueResource/VueResource';
 import RouterHome from '@/components/Routing/Home';
-import User from '@/components/Routing/User';
-import UserStart from '@/components/Routing/UserStart';
-import UserDetail from '@/components/Routing/UserDetail';
-import UserEdit from '@/components/Routing/UserEdit';
+// import User from '';
+// import UserStart from '@/components/Routing/UserStart';
+// import UserDetail from '@/components/Routing/UserDetail';
+// import UserEdit from '@/components/Routing/UserEdit';
 import Header from '@/components/Header/Header';
+
+const User = resolve => {
+  require.ensure(['@/components/Routing/User'], () => {
+    resolve(require('@/components/Routing/User'));
+  }, 'user');
+};
+const UserStart = resolve => {
+  require.ensure(['@/components/Routing/UserStart'], () => {
+    resolve(require('@/components/Routing/UserStart'));
+  }, 'user');
+};
+const UserDetail = resolve => {
+  require.ensure(['@/components/Routing/UserDetail'], () => {
+    resolve(require('@/components/Routing/UserDetail'));
+  }, 'user');
+};
+const UserEdit = resolve => {
+  require.ensure(['@/components/Routing/UserEdit'], () => {
+    resolve(require('@/components/Routing/UserEdit'));
+  }, 'user');
+};
 
 Vue.use(Router);
 
@@ -38,10 +59,7 @@ const router = new Router({
       component: User,
       children: [
         { path: '', name: 'userStart', component: UserStart },
-        { path: ':id', name: 'UserDetail', components: { default: UserDetail, 'header-bottom': Header }, beforeEnter: (to, from, next) => {
-          console.log('inside route setup');
-          next();
-        } },
+        { path: ':id', name: 'UserDetail', components: { default: UserDetail, 'header-bottom': Header }, beforeEnter: (to, from, next) => { console.log('inside route setup'); next(); } },
         { path: ':id/edit', name: 'UserEdit', components: { default: UserEdit, 'header-top': Header } }
       ]
     },
