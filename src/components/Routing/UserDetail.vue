@@ -28,5 +28,13 @@
       }
     }
      */
+    beforeRouteEnter: (to, from, next) => {
+      if (true) {
+        next(); // if we don't write next() the the view will not be loaded cause 'this.link' does not created yet
+      } else {
+        next(false);
+      }
+      // next(vm => { vm.link });
+    }
   }
 </script>
