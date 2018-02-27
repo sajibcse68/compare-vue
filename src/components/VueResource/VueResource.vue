@@ -26,6 +26,7 @@
         </ul>
       </div>
     </div>
+   <h1><b><a href="https://github.com/pagekit/vue-resource" target="_blank"> Learn More </a></b></h1>
   </div>  
 </template>
 

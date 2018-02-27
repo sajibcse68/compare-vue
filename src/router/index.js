@@ -14,58 +14,17 @@ import VueResource from '@/components/VueResource/VueResource';
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
-    {
-      path: '/',
-      name: 'Home',
-      component: Home
-    },
-    {
-      path: '/faq',
-      name: 'Faq',
-      component: Faq
-    },
-    {
-      path: '/form',
-      name: 'Form',
-      component: NewForm
-    },
-    {
-      path: '/quote',
-      name: 'Quote',
-      component: Quote
-    },
-    {
-      path: '/author',
-      name: 'Author',
-      component: Author
-    },
-    {
-      path: '/new',
-      name: 'New',
-      component: New
-    },
-    /* see game-vue project
-    {
-      path: '/monster-game',
-      name: 'Monster Game',
-      component: MonsterGame
-    },
-     */
-    {
-      path: '/wonderful-quotes',
-      name: 'Wonderful Quotes',
-      component: WonderfulQuotes
-    },
-    {
-      path: '/forms',
-      name: 'Forms',
-      component: Forms
-    },
-    {
-      path: '/vue-resource',
-      name: 'Vue Resource',
-      component: VueResource
-    }
+    { path: '/', name: 'Home', component: Home },
+    { path: '/faq', name: 'Faq', component: Faq },
+    { path: '/form', name: 'Form', component: NewForm },
+    { path: '/quote', name: 'Quote', component: Quote },
+    { path: '/author', name: 'Author', component: Author },
+    { path: '/new', name: 'New', component: New },
+    // { path: '/monster-game', name: 'Monster Game', component: MonsterGame }, // see game-vue project
+    { path: '/wonderful-quotes', name: 'Wonderful Quotes', component: WonderfulQuotes },
+    { path: '/forms', name: 'Forms', component: Forms },
+    { path: '/vue-resource', name: 'Vue Resource', component: VueResource }
   ]
 });
