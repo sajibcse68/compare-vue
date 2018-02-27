@@ -15,6 +15,7 @@ import User from '@/components/Routing/User';
 import UserStart from '@/components/Routing/UserStart';
 import UserDetail from '@/components/Routing/UserDetail';
 import UserEdit from '@/components/Routing/UserEdit';
+import Header from '@/components/Header/Header';
 
 Vue.use(Router);
 
@@ -31,14 +32,14 @@ export default new Router({
     { path: '/wonderful-quotes', name: 'Wonderful Quotes', component: WonderfulQuotes },
     { path: '/forms', name: 'Forms', component: Forms },
     { path: '/vue-resource', name: 'Vue Resource', component: VueResource },
-    { path: '/home', name: 'Router Home', component: RouterHome },
+    { path: '/home', name: 'RouterHome', component: RouterHome },
     { path: '/user',
       name: 'User',
       component: User,
       children: [
         { path: '', name: 'userStart', component: UserStart },
-        { path: ':id', name: 'UserDetail', component: UserDetail },
-        { path: ':id/edit', name: 'UserEdit', component: UserEdit }
+        { path: ':id', name: 'UserDetail', components: { default: UserDetail, 'header-bottom': Header } },
+        { path: ':id/edit', name: 'UserEdit', components: { default: UserEdit, 'header-top': Header } }
       ]
     }
   ]

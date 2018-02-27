@@ -1,14 +1,14 @@
 <template>
   <div>
 
-    <app-header></app-header>
-
     <h1>User Page</h1>
     <hr>
     <button class="btn btn-primary" @click="navigateToHome">Back to Home</button>
     <hr>
-    
+
+    <router-view name="header-top"></router-view>
     <router-view></router-view>
+    <router-view name="header-bottom"></router-view>
 
   </div>
 </template>
