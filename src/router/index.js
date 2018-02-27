@@ -10,6 +10,8 @@ import Forms from '@/components/Forms/Forms';
 // import MonsterGame from '@/compopent/Monster';
 import WonderfulQuotes from '@/components/WonderfulQuotes/Quotes';
 import VueResource from '@/components/VueResource/VueResource';
+import RouterHome from '@/components/Routing/Home';
+import User from '@/components/Routing/User';
 
 Vue.use(Router);
 
@@ -25,6 +27,8 @@ export default new Router({
     // { path: '/monster-game', name: 'Monster Game', component: MonsterGame }, // see game-vue project
     { path: '/wonderful-quotes', name: 'Wonderful Quotes', component: WonderfulQuotes },
     { path: '/forms', name: 'Forms', component: Forms },
-    { path: '/vue-resource', name: 'Vue Resource', component: VueResource }
+    { path: '/vue-resource', name: 'Vue Resource', component: VueResource },
+    { path: '/home', name: 'Router Home', component: RouterHome },
+    { path: '/user/:id', name: 'User', component: User }
   ]
 });

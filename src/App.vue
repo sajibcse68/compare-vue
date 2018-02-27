@@ -36,27 +36,31 @@
     </div>
 
 <div class="row">
-  <div class="col-md-2">
+  <!-- 
+  <div class="col-md-1">
     <router-link to="/monster-game" class="nav-item r-item">project-1</router-link>
   </div>
-
-  <div class="col-md-2">
+ -->
+  <div class="col-md-1">
     <router-link to="/wonderful-quotes" class="nav-item r-item">project-2</router-link>
   </div>
 
-  <div class="col-md-2">
+  <div class="col-md-1">
     <router-link to="/Forms" class="nav-item r-item">project-3</router-link>
   </div>
 
-  <div class="col-md-2">
+  <div class="col-md-1">
     <router-link to="form" class="nav-item r-item">Form</router-link>
   </div>
   
-  <div class="col-md-2">
+  <div class="col-md-1">
     <router-link to="faq" class="nav-item r-item">FAQ</router-link>
   </div>
-  <div class="col-md-2">
+  <div class="col-md-1">
     <router-link to="vue-resource" class="nav-item r-item">Vue Resource</router-link>
+  </div>
+  <div class="col-md-1">
+    <router-link to="home" class="nav-item r-item">Router Home</router-link>
   </div>
 </div>
 
