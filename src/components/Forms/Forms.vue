@@ -9,7 +9,7 @@
                         <label for="email">Mail</label>
                         <input
                                 type="text"
-                                id="email"
+                                id=""
                                 class="form-control"
                                 v-model="userData.email">
                     </div>
@@ -17,7 +17,7 @@
                         <label for="password">Password</label>
                         <input
                                 type="password"
-                                id="password"
+                                id=""
                                 class="form-control"
                                 v-model.lazy="userData.password">
                         <p>{{ userData.password}}</p>
@@ -26,7 +26,7 @@
                         <label for="age">Age</label>
                         <input
                                 type="number"
-                                id="age"
+                                id="agee"
                                 class="form-control"
                                 v-model="userData.age">
                     </div>

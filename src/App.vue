@@ -62,6 +62,9 @@
   <div class="col-md-1">
     <router-link to="home" class="nav-item r-item">Router Home</router-link>
   </div>
+  <div class="col-md-1">
+    <router-link to="vuex" class="nav-item r-item">Vuex</router-link>
+  </div>
 </div>
 
 

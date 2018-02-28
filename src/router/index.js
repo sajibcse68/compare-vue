@@ -11,6 +11,7 @@ import Forms from '@/components/Forms/Forms';
 import WonderfulQuotes from '@/components/WonderfulQuotes/Quotes';
 import VueResource from '@/components/VueResource/VueResource';
 import RouterHome from '@/components/Routing/Home';
+import Vuex from '@/components/Vuex/Home';
 // import User from '';
 // import UserStart from '@/components/Routing/UserStart';
 // import UserDetail from '@/components/Routing/UserDetail';
@@ -63,6 +64,7 @@ const router = new Router({
         { path: ':id/edit', name: 'UserEdit', components: { default: UserEdit, 'header-top': Header } }
       ]
     },
+    { path: '/vuex', name: 'vuex', component: Vuex },
     { path: '/redirect-me', redirect: '/user' },
     { path: '*', redirect: '/' }
   ],
