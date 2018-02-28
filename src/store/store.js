@@ -1,6 +1,9 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import counter from './Modules/Counter';
+import * as actions from './actions';
+import * as mutations from './mutations';
+import * as getters from './getters';
 
 Vue.use(Vuex);
 
@@ -8,21 +11,21 @@ export const store = new Vuex.Store({
   state: {
     value: 0
   },
+  /*
   getters: {
-    value: state => {
-      return state.value;
-    }
   },
+    */
+  /*
   mutations: { // always synchronous
-    updateValue: (state, payload) => {
-      state.value = payload;
-    }
   },
+ */
+  /*
   actions: { // need to run async tasks
-    updateValue: ({commit}, payload) => {
-      commit('updateValue', payload);
-    }
   },
+ */
+  getters,
+  mutations,
+  actions,
   modules: {
     counter
   }
