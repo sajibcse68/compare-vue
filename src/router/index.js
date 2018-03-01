@@ -18,6 +18,9 @@ import Vuex from '@/components/Vuex/Home';
 // import UserEdit from '@/components/Routing/UserEdit';
 import Header from '@/components/Header/Header';
 import StockRoot from '@/components/StockRider/Root';
+import StockHome from '@/components/StockRider/Home';
+import StockPortfolio from '@/components/StockRider/portfolio/Portfolio';
+import StockStocks from '@/components/StockRider/stocks/Stocks';
 
 const User = resolve => {
   require.ensure(['@/components/Routing/User'], () => {
@@ -66,7 +69,15 @@ const router = new Router({
       ]
     },
     { path: '/vuex', name: 'vuex', component: Vuex },
-    { path: '/stocks', name: 'Stocks', component: StockRoot },
+    { path: '/stocks',
+      name: 'Stocks',
+      component: StockRoot,
+      children: [
+        { path: '', name: StockHome, component: StockHome },
+        { path: '', name: StockPortfolio, component: StockPortfolio },
+        { path: '', name: StockStocks, component: StockStocks }
+      ]
+    },
     { path: '/redirect-me', redirect: '/user' },
     { path: '*', redirect: '/' }
   ],

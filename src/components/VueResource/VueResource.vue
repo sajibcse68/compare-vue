@@ -7,18 +7,18 @@
           <label>Username</label>
           <input class="form-control" type="text" v-model="user.username">
         </div>
-        
+
         <div class="form-group">
           <label>Email</label>
           <input class="form-control" type="email" v-model="user.email">
         </div>
-        
+
         <button class="btn btn-primary" @click="submit">Submit</button>
         <hr/>
 
         <input type="text" class="form-control" v-model="node">
         <br><br>
- 
+
         <button class="btn btn-primary" @click="fetchData">Get Data</button>
         <br><br>
         <ul>
@@ -27,7 +27,7 @@
       </div>
     </div>
    <h1><b><a href="https://github.com/pagekit/vue-resource" target="_blank"> Learn More </a></b></h1>
-  </div>  
+  </div>
 </template>
 
 <script>
@@ -59,7 +59,7 @@ Vue.http.interceptors.push((req, next) => {
 */
 
 export default {
-  data() {
+  data () {
     return {
       user: {
         username: '',
@@ -68,10 +68,10 @@ export default {
       users: [],
       resoruce: {},
       node: 'data'
-    }
+    };
   },
   methods: {
-    submit() {
+    submit () {
       console.log('data: ', this.user);
       /*
       this.$http.post('', this.user)
@@ -83,9 +83,9 @@ export default {
           console.log('err: ', err);
         })
       */
-     this.resource.saveAlt({}, this.user);
+      this.resource.saveAlt({}, this.user);
     },
-    fetchData() {
+    fetchData () {
       // this.$http.get('')
       //   .then(resp => {
       //     return resp.json();
@@ -100,26 +100,26 @@ export default {
       //   })
       this.resource.getData({node: this.node})
         .then(resp => {
-           return resp.json();
-         })
-         .then(data => {
-           const resultArr = [];
-           for (let key in data) {
-             console.log('data[key]: ', data[key]);
-             resultArr.push(data[key]);
-           }
-           this.users = resultArr;
-         });
-    }, 
+          return resp.json();
+        })
+        .then(data => {
+          const resultArr = [];
+          for (let key in data) {
+            console.log('data[key]: ', data[key]);
+            resultArr.push(data[key]);
+          }
+          this.users = resultArr;
+        });
+    }
   },
-  created() {
+  created () {
     const customActions = {
       saveAlt: { method: 'POST', url: 'alternative.json' },
       getData: { method: 'GET' }
     };
     this.resource = this.$resource('{node}.json', {}, customActions);
   }
-}
+};
 </script>
 
 <style>

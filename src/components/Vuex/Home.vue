@@ -20,16 +20,16 @@ import AnotherResult from './AnotherResult.vue';
 export default {
   computed: {
     value: {
-      get() {
+      get () {
         return this.$store.getters.value;
       },
-      set(value) {
+      set (value) {
         this.$store.dispatch('updateValue', value);
       }
     }
   },
   methods: {
-    updateValue(event) {
+    updateValue (event) {
       this.$store.dispatch('updateValue', event.target.value);
     }
   },

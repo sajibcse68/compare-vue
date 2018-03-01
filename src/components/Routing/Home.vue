@@ -6,9 +6,9 @@
         <hr>
         <app-header></app-header>
       </div>
-    </div>  
-  
-  </div>  
+    </div>
+
+  </div>
 </template>
 
 <script>
@@ -17,5 +17,5 @@ export default {
   components: {
     AppHeader: Header
   }
-}
+};
 </script>

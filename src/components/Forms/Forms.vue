@@ -140,34 +140,33 @@
 <script>
 import Switch from './Switch';
 
-    export default {
-      data: () => {
-        return {
-          userData: {
-            email: '',
-            password: '',
-            age: '27'
-          },
-          message: 'A new text',
-          sendMail: [],
-          gender: 'Male',
-          selectedPriority: 'High',
-          priorities: ['High', 'Medium', 'Low'],
-          dataSwitch: true,
-          isSubmitted: false
-        }
+export default {
+  data: () => {
+    return {
+      userData: {
+        email: '',
+        password: '',
+        age: '27'
       },
-      components: {
-        appSwitch: Switch
-      },
-      methods: {
-        submitted () {
-          this.isSubmitted = true;
-        }
-      }
+      message: 'A new text',
+      sendMail: [],
+      gender: 'Male',
+      selectedPriority: 'High',
+      priorities: ['High', 'Medium', 'Low'],
+      dataSwitch: true,
+      isSubmitted: false
+    };
+  },
+  components: {
+    appSwitch: Switch
+  },
+  methods: {
+    submitted () {
+      this.isSubmitted = true;
     }
+  }
+};
 </script>
 
 <style>
-
 </style>

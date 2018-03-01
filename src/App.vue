@@ -39,7 +39,7 @@
   <div class="col-md-2">
     <router-link to="/stocks" class="nav-item r-item">Stock Rider (p1)</router-link>
   </div>
-  <!-- 
+  <!--
   <div class="col-md-1">
     <router-link to="/monster-game" class="nav-item r-item">project-1</router-link>
   </div>
@@ -55,7 +55,7 @@
   <div class="col-md-1">
     <router-link to="form" class="nav-item r-item">Form</router-link>
   </div>
-  
+
   <div class="col-md-1">
     <router-link to="faq" class="nav-item r-item">FAQ</router-link>
   </div>
@@ -69,7 +69,6 @@
     <router-link to="vuex" class="nav-item r-item">Vuex</router-link>
   </div>
 </div>
-
 
     <router-view></router-view>
 

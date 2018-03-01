@@ -14,23 +14,23 @@
 </template>
 
 <script>
-  export default {
-    data () {
-      return {
-        confirmed: false
-      }
-    },
-    beforeRouteLeave (to, from, next) {
-      console.log('this.confirmed', this.confirmed);
-      if (this.confirmed) {
+export default {
+  data () {
+    return {
+      confirmed: false
+    };
+  },
+  beforeRouteLeave (to, from, next) {
+    console.log('this.confirmed', this.confirmed);
+    if (this.confirmed) {
+      next();
+    } else {
+      if (confirm('Are you sure?')) {
         next();
       } else {
-        if (confirm('Are you sure?')) {
-          next();
-        } else {
-          next(false);
-        } 
+        next(false);
       }
     }
   }
+};
 </script>
