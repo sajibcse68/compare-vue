@@ -74,8 +74,8 @@ const router = new Router({
       component: StockRoot,
       children: [
         { path: '', name: StockHome, component: StockHome },
-        { path: '', name: StockPortfolio, component: StockPortfolio },
-        { path: '', name: StockStocks, component: StockStocks }
+        { path: 'portfolio', name: StockPortfolio, component: StockPortfolio },
+        { path: 'stocks', name: StockStocks, component: StockStocks }
       ]
     },
     { path: '/redirect-me', redirect: '/user' },
