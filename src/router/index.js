@@ -17,6 +17,7 @@ import Vuex from '@/components/Vuex/Home';
 // import UserDetail from '@/components/Routing/UserDetail';
 // import UserEdit from '@/components/Routing/UserEdit';
 import Header from '@/components/Header/Header';
+import StockRoot from '@/components/StockRider/Root';
 
 const User = resolve => {
   require.ensure(['@/components/Routing/User'], () => {
@@ -65,6 +66,7 @@ const router = new Router({
       ]
     },
     { path: '/vuex', name: 'vuex', component: Vuex },
+    { path: '/stocks', name: 'Stocks', component: StockRoot },
     { path: '/redirect-me', redirect: '/user' },
     { path: '*', redirect: '/' }
   ],

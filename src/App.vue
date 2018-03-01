@@ -36,13 +36,16 @@
     </div>
 
 <div class="row">
+  <div class="col-md-2">
+    <router-link to="/stocks" class="nav-item r-item">Stock Rider (p1)</router-link>
+  </div>
   <!-- 
   <div class="col-md-1">
     <router-link to="/monster-game" class="nav-item r-item">project-1</router-link>
   </div>
  -->
-  <div class="col-md-1">
-    <router-link to="/wonderful-quotes" class="nav-item r-item">project-2</router-link>
+  <div class="col-md-3">
+    <router-link to="/wonderful-quotes" class="nav-item r-item">Wonderful Quotes (p2)</router-link>
   </div>
 
   <div class="col-md-1">
@@ -70,19 +73,6 @@
 
     <router-view></router-view>
 
-    <footer class="footer is-primary">
-      <div class="container">
-        <div class="columns">
-          <div class="column">
-            <p>And this right here is a spiffy footer, where you can put stuff.</p>
-          </div>
-          <div class="column has-text-right">
-            <a class="icon" href="#"><i class="fa fa-facebook"></i></a>
-            <a class="icon" href="#"><i class="fa fa-twitter"></i></a>
-          </div>
-        </div>
-      </div>
-    </footer>
   </div>
 </template>
 

@@ -25,12 +25,14 @@
       </section>
     </div>
   <h1>End of FAQ</h1>
+  <app-footer></app-footer>
   </div>
 </template>
 
 <script>
 import axios from 'axios';
 import { eventBus } from '../main';
+import Footer from './Footer';
 
 // import form from './Form.vue';
 
@@ -49,6 +51,10 @@ export default {
     faqs: [],
     errors: []
   }),
+
+  components: {
+    AppFooter: Footer
+  },
 
   methods: {
     changeFaqHeader () {

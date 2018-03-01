@@ -70,12 +70,16 @@
     </div>
   </div>
 <h1>End of Form</h1>
+
+<app-footer></app-footer>
+
 </form>
 </template>
 
 <script>
 import './Faq.vue';
 import { eventBus } from '../main';
+import Footer from './Footer';
 
 export default {
   props: {
@@ -88,6 +92,9 @@ export default {
       heading: 'Soaring to new heights',
       subheading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     };
+  },
+  components: {
+    AppFooter: Footer
   },
   created () {
     eventBus.$on('ageIsChanged', (age) => {
