@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    
+
     <app-header></app-header>
-    
+
     <div class="row">
       <div class="col-md-12">
         <router-view></router-view>
@@ -14,9 +14,9 @@
 <script>
 import Header from './Header';
 export default {
-components: {
-  appHeader: Header
-}
+  components: {
+    appHeader: Header
+  }
 };
 </script>
 
@@ -25,4 +25,3 @@ body {
   padding: 30px;
 }
 </style>
-

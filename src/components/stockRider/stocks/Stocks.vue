@@ -1,8 +1,8 @@
 <template>
   <div class="row">
 
-    <app-stock v-for="stock in stocks" :key="stock.id"></app-stock>
-   
+    <app-stock v-for="stock in stocks" :key="stock.id" :stock="stock"></app-stock>
+
   </div>
 </template>
 
@@ -17,12 +17,12 @@ export default {
         { id: 3, name: 'Apple', price: 100 },
         { id: 4, name: 'Twiller', price: 30 }
       ]
-    }
+    };
   },
   components: {
     appStock: Stock
   }
-}
+};
 </script>
 
 <style scoped>
