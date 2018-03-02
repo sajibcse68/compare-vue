@@ -10,12 +10,13 @@
       </div>
       <div class="panel-body">
         <div class="float-left">
-          <input type="number" class="from-control" placeholder="Quantity" v-model="quantity">
+          <input type="number" class="from-control" placeholder="Quantity" v-model="quantity" :class="{danger: insufficientFunds}">
         </div>
         <div class="float-right">
           <button class="btn btn-success"
             @click="buyStock"
-            :disabled="quantity < 1 || (quantity === parseInt(quantity, 10))">Buy</button>
+            :disabled=" insufficientFunds || quantity < 1 || (quantity === parseInt(quantity, 10))">{{ insufficientFunds ? 
+            'Insufficient Funds' : 'Buy'}}</button>
         </div>
       </div>
     </div>
@@ -30,6 +31,14 @@ export default {
       quantity: 0
     };
   },
+  computed: {
+    funds () {
+      return this.$store.getters.funds;
+    },
+    insufficientFunds () {
+      return this.quantity * this.stock.price > this.funds;
+    }
+  },
   methods: {
     buyStock () {
       const order = {
@@ -38,9 +47,15 @@ export default {
         quantity: this.quantity
       };
       console.log('order>>: ', order);
-      this.$store.dispatch('buyStock', order)
+      this.$store.dispatch('buyStock', order);
       this.quantity = 0;
     }
   }
 };
 </script>
+
+<style>
+.danger {
+  border: 1px solid red;
+}
+</style>

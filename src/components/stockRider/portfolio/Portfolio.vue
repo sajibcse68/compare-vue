@@ -10,14 +10,14 @@ import { mapGetters } from 'vuex';
 import Stock from './Stock';
 export default {
   computed: {
-    ...mapGetters ({
+    ...mapGetters({
       stocks: 'stockPortfolio'
     })
   },
   components: {
     appStock: Stock
   }
-}
+};
 </script>
 
 <style>
