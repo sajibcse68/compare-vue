@@ -15,7 +15,7 @@
         <div class="float-right">
           <button class="btn btn-success"
             @click="sellStock"
-            :disabled="insufficientQuantity || quantity < 1 || (quantity === parseInt(quantity, 10))">{{ insufficientQuantity ? 'Insufficient Quantity' : 'Sell' }}</button>
+            :disabled="insufficientQuantity || quantity < 1 || (quantity === parseInt(quantity, 10))">{{ insufficientQuantity ? 'Not Enough' : 'Sell' }}</button>
         </div>
       </div>
     </div>

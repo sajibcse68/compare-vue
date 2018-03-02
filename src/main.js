@@ -7,6 +7,10 @@ import { store } from './store/store';
 
 Vue.config.productionTip = false;
 
+Vue.filter('currency', (value) => {
+  return `$${value.toLocaleString()}`;
+});
+
 export const eventBus = new Vue();
 
 /* eslint-disable no-new */

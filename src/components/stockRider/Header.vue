@@ -21,7 +21,7 @@
         </div>
       </li>
 
-      <li class="nav-item">Funds: {{ funds }}</li>
+      <li class="nav-item">Funds: {{ funds | currency }}</li>
     </ul>
   </div>
 </nav>
