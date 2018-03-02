@@ -12,8 +12,6 @@
         <div class="float-left">
           <input type="number" class="from-control" placeholder="Quantity" v-model="quantity">
         </div>
-        <p v-text="quantity"></p>
-        <p v-text="parseInt(quantity, 10)"></p>
         <div class="float-right">
           <button class="btn btn-success"
             @click="buyStock"
@@ -39,7 +37,8 @@ export default {
         stockPrice: this.stock.price,
         quantity: this.quantity
       };
-      console.log('order: ', order);
+      console.log('order>>: ', order);
+      this.$store.dispatch('buyStock', order)
       this.quantity = 0;
     }
   }

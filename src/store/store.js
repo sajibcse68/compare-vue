@@ -5,6 +5,7 @@ import * as actions from './actions';
 import * as mutations from './mutations';
 import * as getters from './getters';
 import stocks from './modules/stocks';
+import portfolio from './modules/portfolio';
 
 Vue.use(Vuex);
 
@@ -30,6 +31,7 @@ export const store = new Vuex.Store({
   actions,
   modules: {
     counter,
-    stocks
+    stocks,
+    portfolio
   }
 });
