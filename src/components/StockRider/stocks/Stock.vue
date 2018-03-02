@@ -15,7 +15,7 @@
         <div class="float-right">
           <button class="btn btn-success"
             @click="buyStock"
-            :disabled=" insufficientFunds || quantity < 1 || (quantity === parseInt(quantity, 10))">{{ insufficientFunds ? 
+            :disabled=" insufficientFunds || quantity < 1 || (quantity === parseInt(quantity, 10))">{{ insufficientFunds ?
             'Insufficient Funds' : 'Buy'}}</button>
         </div>
       </div>

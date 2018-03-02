@@ -13,7 +13,7 @@
 
       <li class="nav-item" @click="endDay"><a href="#">End Day</a></li>
 
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown" :class="{show: isDisDropdownOpen}" @click="isDisDropdownOpen = !isDropdownOpen">
         <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Save & Load
         </a>
@@ -34,6 +34,11 @@
 import { mapActions } from 'vuex';
 
 export default {
+  data () {
+    return {
+      isDropdownOpen: false
+    };
+  },
   computed: {
     funds () {
       return this.$store.getters.funds;
