@@ -11,9 +11,11 @@
       <router-link tag="li" to="/stocks/portfolio" class="nav-item" activeClass="active"><a class="nav-link">Portfolio</a></router-link>
       <router-link tag="li" to="/stocks/stocks" class="nav-item" activeClass="active"><a class="nav-link">Stocks</a></router-link>
 
+      <li class="nav-item" @click="endDay"><a href="#">End Day</a></li>
+
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          End Day
+          Save & Load
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="#">Save Data</a>
@@ -29,10 +31,20 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   computed: {
     funds () {
       return this.$store.getters.funds;
+    }
+  },
+  methods: {
+    ...mapActions([
+      'randomizeStocks'
+    ]),
+    endDay () {
+      this.randomizeStocks();
     }
   }
 };
