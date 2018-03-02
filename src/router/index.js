@@ -60,7 +60,6 @@ const router = new Router({
     { path: '/vue-resource', name: 'Vue Resource', component: VueResource },
     { path: '/home', name: 'RouterHome', component: RouterHome },
     { path: '/user',
-      name: 'User',
       component: User,
       children: [
         { path: '', name: 'userStart', component: UserStart },
@@ -70,12 +69,11 @@ const router = new Router({
     },
     { path: '/vuex', name: 'vuex', component: Vuex },
     { path: '/stocks',
-      name: 'Stocks',
       component: StockRoot,
       children: [
         { path: '', name: StockHome, component: StockHome },
-        { path: 'portfolio', name: StockPortfolio, component: StockPortfolio },
-        { path: 'stocks', name: StockStocks, component: StockStocks }
+        { path: 'portfolio', name: 'StockPortfolio', component: StockPortfolio },
+        { path: 'stocks', name: 'StockStocks', component: StockStocks }
       ]
     },
     { path: '/redirect-me', redirect: '/user' },

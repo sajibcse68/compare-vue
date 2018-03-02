@@ -31,12 +31,6 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import VueResource from 'vue-resource';
-
-Vue.use(VueResource);
-
-Vue.http.options.root = 'https://vuejs-http-77464.firebaseio.com/';
 // Vue.http.options.headers = 'anything'
 
 /*
