@@ -45,9 +45,10 @@ export default {
     }
   },
   methods: {
-    ...mapActions([
-      'randomizeStocks'
-    ]),
+    ...mapActions({
+      randomizeStocks: 'randomizeStocks',
+      fetchData: 'loadData'
+    }),
     endDay () {
       this.randomizeStocks();
     },
@@ -60,7 +61,7 @@ export default {
       this.$http.put('tradeRider.json', data);
     },
     loadData () {
-
+      this.fetchData();
     }
   }
 };
